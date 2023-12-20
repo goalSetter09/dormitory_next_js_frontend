@@ -37,9 +37,44 @@ export default function Page() {
             }
           })
       }}>
-        <p><input type="text" id="studentNumber" placeholder="Student Number" value={studentNumber} onChange={handleChange}></input></p>
-        <p><button type="submit">예약</button></p>
+        <input type="text" id="studentNumber" placeholder="Student Number" value={studentNumber} onChange={handleChange}></input>
+        <button type="submit">예약</button>
       </form>
+      <style jsx>
+        {`
+            h1 {
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            }
+            form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: auto;
+            color: #fff;
+            padding: 18px 20px;
+            font-weight: bold;
+            }
+            form > input {
+            border: 2px solid #00AEFF;
+            border-radius: 20px;
+            width: 30%;
+            margin: 5px auto;
+            text-align: center;
+            }
+
+            form > button {
+              border: 2px solid #00AEFF;
+              border-radius: 20px;
+              width: 30%;
+              margin: 5px auto;
+              text-align: center;
+              button-style: none;
+            }  
+          `}
+      </style>
+
       <Warning />
     </>
   );

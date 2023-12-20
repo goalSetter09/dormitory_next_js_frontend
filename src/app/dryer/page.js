@@ -9,7 +9,7 @@ export default async function Page() {
   return (
     <>
       <h1>Washer</h1>
-      <ul>
+      <ul className="available-list">
         {result.length > 0 ? result.map(dryer => (
           <Dryer dryer={dryer}><Link href={"/dryer/" + dryer.number}>{dryer.number}</Link></Dryer>
         )) : <p>예약가능한 건조기가 없습니다.</p>}
